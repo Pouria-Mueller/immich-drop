@@ -414,9 +414,7 @@ async def favicon() -> Response:
 async def api_ping() -> dict:
     """Connectivity test endpoint used by the UI to display a temporary banner."""
     return {
-        "ok": immich_ping(), 
-        "base_url": SETTINGS.normalized_base_url,
-        "album_name": SETTINGS.album_name if SETTINGS.album_name else None
+        "ok": immich_ping() 
     }
 
 @app.get("/api/config")

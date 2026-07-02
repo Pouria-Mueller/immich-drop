@@ -339,10 +339,7 @@ if (btnPing) btnPing.onclick = async () => {
     pingStatus.textContent = j.ok ? 'Connected' : 'No connection';
     pingStatus.className = 'ml-2 text-sm ' + (j.ok ? 'text-green-600' : 'text-red-600');
     if(j.ok){
-      let bannerText = `Connected to Immich at ${j.base_url}`;
-      if(j.album_name) {
-        bannerText += ` | Uploading to album: "${j.album_name}"`;
-      }
+      let bannerText = `Connected to Immich`;
       showBanner(bannerText, 'ok');
     }
   }catch{
